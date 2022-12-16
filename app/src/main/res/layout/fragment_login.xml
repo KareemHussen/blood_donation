@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivDonateLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="66dp"
+            android:src="@drawable/donate_icon_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login"
+            android:textSize="22sp"
+            android:text="LOG IN"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="225dp"/>
+
+        <EditText
+            android:id="@+id/etEmailLogin"
+            android:layout_width="374dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input_bg"
+            android:inputType="textWebEmailAddress"
+            android:hint="Email"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/email_icon"
+            app:layout_constraintBottom_toTopOf="@id/etPasswordLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivDonateLogin" />
+        <EditText
+            android:id="@+id/etPasswordLogin"
+            android:layout_width="374dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input_bg"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:drawableLeft="@drawable/lock_icon"
+            android:drawableRight="@drawable/hidde_password_icon_"
+            android:drawablePadding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEmailLogin" />
+
+
+        <TextView
+            android:id="@+id/tvForgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#FF2156"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/don_t_have_"
+                android:textColor="#7E7E7E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/don_t_have_"
+                android:textAppearance="@style/don_t_have_"
+                android:translationY="-0.67sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="1sp"
+                android:text="Register Now."
+                android:textColor="#FF2156"
+                android:textSize="18sp"
+                android:translationY="-0.67sp"
+                app:layout_constraintBottom_toBottomOf="@+id/don_t_have_"
+                app:layout_constraintStart_toEndOf="@+id/don_t_have_"
+                app:layout_constraintTop_toTopOf="@+id/don_t_have_" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
