@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_blod.xml" value="0.1465" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_blood.xml" value="0.1" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_bloodtype.xml" value="0.1" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_heartbeat.xml" value="0.1" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_person.xml" value="0.1465" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/drawable/ic_user.xml" value="0.1465" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_donation_request.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_register.xml" value="0.16198347107438016" />
+        <entry key="..\:/Users/Abanoub/StudioProjects/blood_donation/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="loginMarginHorizontal">@dimen/_20sdp</dimen>
+    <dimen name="loginMarginTop">@dimen/_18sdp</dimen>
+</resources>
