@@ -1,4 +1,5 @@
 plugins {
+    id 'kotlin-android'
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
@@ -58,4 +59,11 @@ dependencies {
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+
+
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Blood Donation</string>
+    <string name="app_logo">شعار التطبيق</string>
+    <string name="app_moto">أقدم على التبرع</string>
+    <string name="onBoarding1_txt">ابحث عن المتبرعين بالدم</string>
+    <string name="next">التالي</string>
+    <string name="skip">تخطّ</string>
+    <string name="login_description">يمكنك التبرع بالدم للمحتاج أو طلب دم عند الإحتياج</string>
+    <string name="log_in">تسجيل دخول</string>
+    <string name="register">تسجيل</string>
+    <string name="onBoarding2_txt">أرسل طلب دم</string>
+    <string name="second_screen_description">يمكنك تقديم طلب دم عند الإحتياج لكي يعرف المتبرعون</string>
+    <string name="first_screen_description">يمكنك العثور على متبرعين ذوي فصائل دم متوافقة</string>
+</resources>
