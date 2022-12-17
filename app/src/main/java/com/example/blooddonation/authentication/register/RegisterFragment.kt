@@ -1,4 +1,4 @@
-package com.example.blooddonation.register
+package com.example.blooddonation.authentication.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

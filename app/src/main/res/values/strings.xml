@@ -14,4 +14,13 @@
     <string name="register">Register</string>
     <string name="second_screen_description">If you need blood, you can post a blood request form so donors can help</string>
     <string name="first_screen_description">You can find blood donors with a matching blood type</string>
+
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="location">Location</string>
+    <string name="blood_type">Blood Type</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="todo">TODO</string>
 </resources>

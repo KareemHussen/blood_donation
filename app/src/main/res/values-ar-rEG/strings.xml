@@ -3,6 +3,8 @@
     <string name="app_name">Blood Donation</string>
     <string name="app_logo">شعار التطبيق</string>
     <string name="app_moto">أقدم على التبرع</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu tristique tristique quam in.</string>
     <string name="onBoarding1_txt">ابحث عن المتبرعين بالدم</string>
     <string name="next">التالي</string>
     <string name="skip">تخطّ</string>
@@ -12,4 +14,12 @@
     <string name="onBoarding2_txt">أرسل طلب دم</string>
     <string name="second_screen_description">يمكنك تقديم طلب دم عند الإحتياج لكي يعرف المتبرعون</string>
     <string name="first_screen_description">يمكنك العثور على متبرعين ذوي فصائل دم متوافقة</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="location">الموقع</string>
+    <string name="blood_type">فصيلة الدم</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="password">كلمة المرور</string>
+    <string name="already_have_an_account">مستخدم مسجل مسبقا ؟</string>
+    <string name="todo">TODO</string>
 </resources>
