@@ -1,4 +1,4 @@
-package com.example.blooddonation.onboarding.screens
+package com.example.blooddonation.onboarding.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -10,29 +10,28 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.blooddonation.R
-import com.example.blooddonation.databinding.FragmentSecondScreenBinding
+import com.example.blooddonation.databinding.FragmentFirstScreenBinding
 
-class SecondScreen : Fragment() {
+class FirstScreen : Fragment() {
 
-    private lateinit var secondScreenBinding:FragmentSecondScreenBinding
+    private lateinit var firstScreenBinding: FragmentFirstScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        secondScreenBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_second_screen, container, false)
+        firstScreenBinding =DataBindingUtil.inflate(inflater,R.layout.fragment_first_screen, container, false)
+        val viewPager =  activity?.findViewById<ViewPager2>(R.id.viewPager)
 
-        secondScreenBinding.next2.setOnClickListener {
+        firstScreenBinding.next.setOnClickListener {
+            viewPager?.currentItem = 1
+        }
+
+        firstScreenBinding.skip.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_loginFragment)
             onBoardingFinished()
         }
-
-        secondScreenBinding.skip2.setOnClickListener {
-            findNavController().navigate(R.id.action_viewPagerFragment_to_loginFragment)
-            onBoardingFinished()
-        }
-
-        return secondScreenBinding.root
+        return firstScreenBinding.root
     }
 
     private fun onBoardingFinished(){

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.blooddonation.HomeFragment"
+        android:name="com.example.blooddonation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,23 +22,23 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.blooddonation.ProfileFragment"
+        android:name="com.example.blooddonation.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.blooddonation.SearchFragment"
+        android:name="com.example.blooddonation.home.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/donationRequestFragment"
-        android:name="com.example.blooddonation.DonationRequestFragment"
+        android:name="com.example.blooddonation.home.request.DonationRequestFragment"
         android:label="fragment_donation_request"
         tools:layout="@layout/fragment_donation_request" />
 
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.blooddonation.onboarding.ViewPagerFragment"
+        android:name="com.example.blooddonation.onboarding.ui.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.blooddonation.LoginFragment"
+        android:name="com.example.blooddonation.authentication.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

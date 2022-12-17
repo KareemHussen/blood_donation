@@ -1,4 +1,4 @@
-package com.example.blooddonation.onboarding
+package com.example.blooddonation.onboarding.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

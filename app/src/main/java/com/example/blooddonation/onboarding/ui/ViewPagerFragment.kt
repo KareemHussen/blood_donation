@@ -1,4 +1,4 @@
-package com.example.blooddonation.onboarding
+package com.example.blooddonation.onboarding.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,8 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.blooddonation.R
 import com.example.blooddonation.databinding.FragmentViewPagerBinding
-import com.example.blooddonation.onboarding.screens.FirstScreen
-import com.example.blooddonation.onboarding.screens.SecondScreen
+import com.example.blooddonation.onboarding.adapters.ViewPagerAdapter
 
 
 class ViewPagerFragment : Fragment() {
