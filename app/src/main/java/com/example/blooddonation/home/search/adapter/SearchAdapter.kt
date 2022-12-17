@@ -1,4 +1,4 @@
-package com.example.blooddonation.adapter
+package com.example.blooddonation.home.search.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -21,5 +21,8 @@
     <string name="phone_number">رقم الهاتف</string>
     <string name="password">كلمة المرور</string>
     <string name="already_have_an_account">مستخدم مسجل مسبقا ؟</string>
+    <string name="donation_request">طلب تبرع</string>
+    <string name="search">بحث</string>
+    <string name="filters">تصفية البحث</string>
     <string name="todo">TODO</string>
 </resources>
