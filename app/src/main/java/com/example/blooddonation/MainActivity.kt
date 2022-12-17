@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.bottomNavigationView.background = null;
-        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
 
         val navController = findNavController(R.id.fragmentContainerView2)
 

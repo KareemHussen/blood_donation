@@ -14,7 +14,7 @@
 
     <item android:id="@+id/donationRequestFragment"
         android:title="Donation"
-        android:icon="@drawable/ic_heartbeat" />
+        android:icon="@drawable/vector_10" />
     <item android:id="@+id/profileFragment"
         android:title="Profile"
         android:icon="@drawable/ic_person" />
