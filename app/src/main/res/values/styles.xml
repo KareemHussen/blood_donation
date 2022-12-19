@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Moto_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_23ssp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:contentDescription">@string/app_moto</item>
+    </style>
+
+    <style name="Logo_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/vector_logo</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:contentDescription">@string/app_logo</item>
+    </style>
+
+    <style name="onBoarding_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">@dimen/_19ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="onBoarding_description">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/description_color</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="next_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@string/next</item>
+        <item name="android:textColor">@color/pinky_red</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:fontFamily">@font/poppins_reg</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="skip_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@string/skip</item>
+        <item name="android:textColor">@color/skip_color</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:fontFamily">@font/poppins_reg</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+</resources>

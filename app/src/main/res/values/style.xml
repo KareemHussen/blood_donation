@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="name">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.06
+        </item>
+
+        <item name="android:textColor">
+            #7E7E7E
+        </item>
+
+    </style>
+
+    <style name="amir_hamza">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.05
+        </item>
+
+        <item name="android:textColor">
+            #272A2F
+        </item>
+
+    </style>
+
+    <style name="location">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.06
+        </item>
+
+        <item name="android:textColor">
+            #7E7E7E
+        </item>
+
+    </style>
+
+    <style name="hertford_br">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.05
+        </item>
+
+        <item name="android:textColor">
+            #272A2F
+        </item>
+
+    </style>
+
+    <style name="min_ago">
+
+        <item name="android:textSize">
+            13sp
+        </item>
+
+        <item name="android:textColor">
+            #7E7E7E
+        </item>
+
+    </style>
+
+    <style name="donate">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.04
+        </item>
+
+        <item name="android:textColor">
+            #FF2156
+        </item>
+    </style>
+    <style name="donation_re">
+
+        <item name="android:textSize">
+            22sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.02
+        </item>>
+        <item name="android:textColor">
+            #272A2F
+        </item>
+
+    </style>
+    <style name="search">
+
+        <item name="android:textSize">
+            22sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.02
+        </item>
+
+        <item name="android:textColor">
+            #272A2F
+        </item>
+
+    </style>
+    <style name="filters">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.02
+        </item>
+
+        <item name="android:textColor">
+            #272A2F
+        </item>
+
+
+
+    </style>
+
+</resources>
