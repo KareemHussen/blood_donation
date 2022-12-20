@@ -1,4 +1,4 @@
-package com.example.blooddonation.home.request
+package com.example.blooddonation.home.request.model
 
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ServerTimestamp

@@ -1,4 +1,4 @@
-package com.example.blooddonation.home.request
+package com.example.blooddonation.home.request.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

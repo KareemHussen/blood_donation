@@ -1,9 +1,6 @@
-package com.example.blooddonation.home.request
+package com.example.blooddonation.home.request.ui
 
 import android.os.Bundle
-import android.provider.CalendarContract.Calendars
-import android.text.Editable
-import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,19 +9,14 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.blooddonation.R
 import com.example.blooddonation.databinding.FragmentCreateRequestBinding
-import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
+import com.example.blooddonation.home.request.model.RequestModel
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.util.Date
 
 class CreateRequest : Fragment() {
     private lateinit var binding: FragmentCreateRequestBinding
@@ -46,7 +38,7 @@ class CreateRequest : Fragment() {
             emptyFieldsChecking()
             val request = makeNewRequest()
             CoroutineScope((Dispatchers.IO)).launch {
-                if (request != null) {
+                 if (request != null) {
                     requestVm.makeRequest(request)
                 }
             }

@@ -1,33 +1,30 @@
-package com.example.blooddonation.home.request
+package com.example.blooddonation.home.request.ui
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.android.gms.tasks.Task
+import com.example.blooddonation.home.request.model.RequestModel
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
 class RequestViewModel(firebase: Firebase) : ViewModel() {
-    private val collectionPath = "User Requests"
+    private val collectionPath = "Requests"
     private val firestore = firebase.firestore
-
     private val requestsCollection = firestore.collection(collectionPath)
 
     //TODO Enable request with authentication and pass user id to document path
     private val authUser = firebase.auth
     val userId = "121"
   //   private val user = authUser.currentUser
-
-
     //Make request function to add new request
-    suspend fun makeRequest(request: RequestModel) {
-        withContext(Dispatchers.IO) {
+     fun makeRequest(request: RequestModel) =
+        CoroutineScope(Dispatchers.IO).launch {
             //Creating a new document with request phone number till enabling authentication
             //SetOptions.merge gives me optionality to merge previous requests with same phone
             // and later ... with authentication
@@ -35,10 +32,11 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
             //TODO Change dummy user ID to current user id
             map.put("Request", request)
             map.put("Time Stamp", FieldValue.serverTimestamp())
-            val document = requestsCollection.document(userId)
+            map.put("User Id",userId)
+            val document = requestsCollection.document()
             document.get().addOnSuccessListener { doc ->
                 if (doc != null) {
-                    document.collection("Requests").add(map).addOnSuccessListener {
+                    document.set(map).addOnSuccessListener {
                         Log.d("Request Creation", "Request added successfully")
                     }.addOnFailureListener() { e ->
                         Log.d("Request Creation", e.message.toString()
@@ -51,22 +49,24 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
 
         }
 
-    }
-    suspend fun retrieveRequests(): LiveData<Task<QuerySnapshot>>{
-        val requestsLiveData = MutableLiveData<Task<QuerySnapshot>>()
-        withContext(Dispatchers.IO){
-            requestsLiveData.value= firestore.collection(collectionPath)
-                .get()
-                .addOnSuccessListener { result ->
-                    for (document in result) {
-                        Log.d("Document Data", "${document.id} => ${document.data}")
-                    }
+
+    suspend fun retrieveRequests():ArrayList<HashMap<String,Any>>{
+        return withContext(Dispatchers.IO){
+            val requestsList=ArrayList<HashMap<String,Any>>()
+            try {
+                val querySnapshot=requestsCollection.get().await()
+                for (document in querySnapshot.documents){
+                    val request: HashMap<String, Any> = document.data as HashMap<String, Any>
+                    requestsList.add(request)
+                    Log.d("Requests Retrieval ","Requests retrieved successfully")
                 }
-                .addOnFailureListener { exception ->
-                    Log.d("Document Data", "Error getting documents: ", exception)
-                }
+            }catch (e:Exception){
+                Log.e("Requests Retrieval ",e.message.toString())
+            }
+            Log.d("Requests Retrieval",requestsList.get(0).toString())
+            requestsList
         }
-        return requestsLiveData
     }
+
 
 }
