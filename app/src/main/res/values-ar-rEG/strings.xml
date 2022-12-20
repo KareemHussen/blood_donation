@@ -25,4 +25,8 @@
     <string name="search">بحث</string>
     <string name="filters">تصفية البحث</string>
     <string name="todo">TODO</string>
+    <string name="required">هذه الخانة مطلوبة</string>
+    <string name="city">المدينة</string>
+    <string name="optional">(اختيارى)</string>
+    <string name="hospital">مستشفى</string>
 </resources>
