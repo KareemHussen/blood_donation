@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.request.DonationRequestFragment">
+    tools:context=".home.request.ui.DonationRequestFragment">
 
     <TextView
         android:id="@+id/textView6"
