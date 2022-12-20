@@ -1,40 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.request.DonationRequestFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="222dp"
-        android:layout_height="34dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:text="@string/donation_request"
-        android:textAppearance="@style/donation_re"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RVdonation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RVdonation"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginBottom="8dp"
-        android:clipToPadding="false"
-        android:paddingBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_goneMarginTop="33dp"
-        tools:listitem="@layout/item_view" />
+        android:layout_height="match_parent"
+        android:backgroundTint="#fdfdfd"
+        tools:context=".home.request.DonationRequestFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="222dp"
+            android:layout_height="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/donation_request"
+            android:textAppearance="@style/donation_re"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/RVdonation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVdonation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="58dp"
+            android:background="@color/white"
+            android:backgroundTint="#FFFFFF"
+            android:clipToPadding="false"
+            android:paddingBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_goneMarginTop="33dp"
+            tools:listitem="@layout/item_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
