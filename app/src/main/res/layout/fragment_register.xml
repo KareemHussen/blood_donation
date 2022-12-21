@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".authentication.register.RegisterFragment">
 
-    <data></data>
+    <data/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,8 +27,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_userName"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
+                app:helperTextTextColor="@color/main"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/_32sdp"
@@ -51,9 +52,10 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:helperTextTextColor="@color/main"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
                 app:layout_constraintBottom_toTopOf="@+id/til_password"
@@ -75,12 +77,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
                 app:layout_constraintBottom_toTopOf="@+id/til_phone"
+                app:helperTextTextColor="@color/main"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,12 +104,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_phone"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
                 app:layout_constraintBottom_toTopOf="@+id/til_blood"
+                app:helperTextTextColor="@color/main"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,12 +129,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_blood"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
                 app:layout_constraintBottom_toTopOf="@+id/til_location"
+                app:helperTextTextColor="@color/main"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -149,12 +154,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_location"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
                 app:layout_constraintBottom_toTopOf="@+id/btn_register"
+                app:helperTextTextColor="@color/main"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
