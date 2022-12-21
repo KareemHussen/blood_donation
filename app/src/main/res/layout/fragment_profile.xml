@@ -32,7 +32,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
             android:text="@string/profile"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -89,8 +88,8 @@
             android:textAlignment="center"
             android:textColor="#7C7C7C"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/user_name"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
             app:layout_constraintTop_toBottomOf="@+id/user_name"
             tools:text="Brooklyn, New York" />
 
@@ -99,19 +98,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_location" />
+            app:layout_constraintTop_toBottomOf="@id/user_location">
+
+
+
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/user_buttons_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="24dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -122,33 +128,68 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_box_shape"
-                android:drawableStart="@drawable/ic_location"
-                android:drawablePadding="10dp"
+                android:background="@drawable/rounded_rect_shape"
+                android:drawableStart="@drawable/available_btn"
+                android:drawablePadding="12dp"
                 android:fontFamily="@font/poppins_medium"
-                android:minHeight="48dp"
+                android:minHeight="55dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="@string/available"
                 android:textColor="@color/grey_white"
                 android:textSize="14sp" />
-
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_box_shape"
-                android:drawableStart="@drawable/ic_location"
-                android:drawablePadding="10dp"
+                android:background="@drawable/rounded_rect_shape"
+                android:drawableStart="@drawable/invite_btn"
+                android:drawablePadding="12dp"
                 android:fontFamily="@font/poppins_medium"
-                android:minHeight="48dp"
+                android:minHeight="55dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="@string/invite"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/grey_white"
                 android:textSize="14sp" />
 
-        </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_rect_shape"
+                android:drawableStart="@drawable/help_btn"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:minHeight="55dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/help"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_white"
+                android:textSize="14sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_shape"
+                android:drawableStart="@drawable/sign_out_btn"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:minHeight="55dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/sign_out"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
