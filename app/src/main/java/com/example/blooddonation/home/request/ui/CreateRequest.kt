@@ -22,7 +22,7 @@ import java.util.*
 
 class CreateRequest : Fragment() {
     private lateinit var binding: FragmentCreateRequestBinding
-    private  val requestVm: RequestViewModel by activityViewModels {
+    private val requestVm: RequestViewModel by activityViewModels {
         RequestViewModelFactory(Firebase)
     }
 
@@ -37,10 +37,11 @@ class CreateRequest : Fragment() {
         binding = FragmentCreateRequestBinding.inflate(inflater, container, false)
         binding.button.setOnClickListener {
             binding.mobileNumTextLayout.helperText = checkPhoneNumberValidation(binding.mobileNumET).errorMessage
+            binding.bloodTypeContainer.helperText=checkBloodType(binding.bloodTypeET).errorMessage
             emptyFieldsChecking()
             val request = makeNewRequest()
             CoroutineScope((Dispatchers.IO)).launch {
-                 if (request != null) {
+                if (request != null) {
                     requestVm.makeRequest(request)
 
                  }
@@ -53,12 +54,12 @@ class CreateRequest : Fragment() {
         val name = binding.etName.text.toString()
         val city = binding.cityEditText.text.toString()
         val hospital = binding.hospitalET.text.toString()
-        val bloodType = binding.bloodTypeET.text.toString()
+        val bloodType = binding.bloodTypeET.text.toString().uppercase()
         val notes: String = binding.notesET.text.toString()
         val sdf = SimpleDateFormat("dd/M/yyyy hh:mm ")
         val currentDate = sdf.format(Date())
         if (binding.mobileNumET.text!!.isNotEmpty()) {
-            val phoneNumber = Integer.parseInt("0"+binding.mobileNumET.text.toString())
+            val phoneNumber = Integer.parseInt("0" + binding.mobileNumET.text.toString())
             return if (notes.isEmpty()) {
                 RequestModel(name,city, bloodType, hospital, phoneNumber.toString(), "Not specified notes",currentDate.toString())
             } else {
@@ -72,11 +73,12 @@ class CreateRequest : Fragment() {
         val arrayOfEditable = arrayOf(binding.cityEditText, binding.hospitalET, binding.mobileNumET, binding.bloodTypeET)
         val arrayOfLayouts = arrayOf(binding.cityContainerLayout, binding.hospitalContainer, binding.mobileNumTextLayout, binding.bloodTypeContainer)
         for (editable in arrayOfEditable.indices) {
-            if (arrayOfEditable[editable].text.isEmpty()) {
-                arrayOfLayouts[editable].helperText= requireContext().getString(R.string.required)
+            if (arrayOfEditable[editable].text!!.isEmpty()) {
+                arrayOfLayouts[editable].helperText = requireContext().getString(R.string.required)
             }
         }
     }
+
     private fun checkPhoneNumberValidation(editText: EditText): Result {
         val phoneNumber = editText.text.toString()
         if (!Patterns.PHONE.matcher(phoneNumber).matches()) {
@@ -106,6 +108,28 @@ class CreateRequest : Fragment() {
                     return Result(
                         success = false,
                         errorMessage = "Not a valid Egyptian phone number"
+                    )
+                }
+            }
+        }
+        return Result(true, null)
+    }
+
+    private fun checkBloodType(editText: EditText): Result {
+        val bloodType = editText.text.toString().uppercase()
+        for (c in bloodType.indices) {
+            if (c == 0) {
+                if (bloodType[c].uppercase() != "A" && bloodType[c].lowercase() != "B" && bloodType[c].lowercase() != "O") {
+                    return Result(
+                        success = false,
+                        errorMessage = "Not a valid Blood type"
+                    )
+                }
+            } else if (c == 1) {
+                if (bloodType[c].uppercase() != "B" && bloodType[c] != '+' && bloodType[c] != '-') {
+                    return Result(
+                        success = false,
+                        errorMessage = "Not a valid Blood type"
                     )
                 }
             }
