@@ -39,7 +39,7 @@ class RegisterFragment : Fragment() {
 
     private fun loginClicked() {
         binding.btnLogIn.setOnClickListener {
-//            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
     }
 

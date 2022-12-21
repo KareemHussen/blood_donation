@@ -53,13 +53,14 @@ class DonationRequestFragment : Fragment() {
             }
 
         }
-        CoroutineScope(Dispatchers.Main).launch{
-        retrieveRequests()
+        CoroutineScope(Dispatchers.Main).launch {
+            retrieveRequests()
 
         }
 
         return binding.root
     }
+
     private fun retrieveRequests() {
         CoroutineScope(Dispatchers.IO).launch {
 
@@ -79,26 +80,6 @@ class DonationRequestFragment : Fragment() {
         }
     }
 
-/*
-    private fun retrieveRequests() {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val querySnapshot = donationRequestRef.get().await()
-                for (document in querySnapshot.documents) {
-                    val request = document.toObject<RequestModel>()
-                    data.add(request!!)
-                }
-                withContext(Dispatchers.Main) {
-                    requestsAdapter.submitList(data)
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-    }
-*/
 
     fun onClicked(request: RequestModel) {
     }
