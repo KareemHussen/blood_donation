@@ -106,7 +106,7 @@
             android:singleLine="true"
             android:textAlignment="viewStart"
             android:textColorHint="@color/to_color"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_15sdp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
