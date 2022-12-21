@@ -6,15 +6,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.blooddonation.databinding.ItemViewBinding
+import com.example.blooddonation.home.request.model.RequestModel
 
 class RequestsAdapter(private val clickListener: RequestListener) :
-    ListAdapter<Request, RequestsAdapter.RequestViewHolder>(RequestDiff()) {
+    ListAdapter<RequestModel, RequestsAdapter.RequestViewHolder>(RequestDiff()) {
 
 
     class RequestViewHolder(private val binding: ItemViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(request: Request) {
+        fun bind(request: RequestModel) {
             binding.request = request
             binding.executePendingBindings()
         }
@@ -37,20 +38,20 @@ class RequestsAdapter(private val clickListener: RequestListener) :
     }
 
 
-    class RequestDiff : DiffUtil.ItemCallback<Request>() {
+    class RequestDiff : DiffUtil.ItemCallback<RequestModel>() {
 
-        override fun areItemsTheSame(oldItem: Request, newItem: Request): Boolean =
+        override fun areItemsTheSame(oldItem: RequestModel, newItem: RequestModel): Boolean =
             oldItem === newItem
 
 
-        override fun areContentsTheSame(oldItem: Request, newItem: Request): Boolean =
+        override fun areContentsTheSame(oldItem: RequestModel, newItem: RequestModel): Boolean =
             oldItem == newItem
 
 
     }
 
-    class RequestListener(val clickListener: (request: Request) -> Unit) {
-        fun onClick(request: Request) = clickListener(request)
+    class RequestListener(val clickListener: (request: RequestModel) -> Unit) {
+        fun onClick(request: RequestModel) = clickListener(request)
     }
 
 }

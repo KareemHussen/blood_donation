@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createRequest"
+            app:destination="@id/createRequest" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -32,7 +35,7 @@
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/donationRequestFragment"
-        android:name="com.example.blooddonation.home.request.DonationRequestFragment"
+        android:name="com.example.blooddonation.home.request.ui.DonationRequestFragment"
         android:label="fragment_donation_request"
         tools:layout="@layout/fragment_donation_request" />
 
@@ -52,4 +55,8 @@
         android:name="com.example.blooddonation.authentication.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/createRequest"
+        android:name="com.example.blooddonation.home.request.ui.CreateRequest"
+        android:label="CreateRequest" />
 </navigation>

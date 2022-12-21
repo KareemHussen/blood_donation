@@ -20,10 +20,7 @@ class HomeFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        binding.button.setOnClickListener {
-                view: View ->
-            view.findNavController()
-                .navigate(R.id.action_homeFragment_to_creareRequestFragment2)        }
+
         return binding.root
     }
 

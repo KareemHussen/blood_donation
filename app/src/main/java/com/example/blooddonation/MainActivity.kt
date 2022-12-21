@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.fab.setOnClickListener {
-            navController.navigate(R.id.creareRequestFragment)
+            navController.navigate(R.id.createRequest)
         }
 
     }

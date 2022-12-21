@@ -6,7 +6,7 @@
     <data>
     <variable
         name="request"
-        type="com.example.blooddonation.home.request.Request" />
+        type="com.example.blooddonation.home.request.model.RequestModel" />
 
     </data>
 
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="46dp"
                 android:layout_marginTop="2dp"
-                android:text="@{request.hospital}"
+                android:text="@{request.city}"
                 android:textAppearance="@style/hertford_br"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +82,7 @@
                 android:layout_marginStart="46dp"
                 android:layout_marginTop="14dp"
                 android:layout_marginBottom="12dp"
-                android:text="20-12-2022 15:03 PM"
+                android:text="@{request.timeRequest}"
                 android:textAppearance="@style/min_ago"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
