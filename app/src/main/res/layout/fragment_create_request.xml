@@ -1,108 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.request.ui.CreateRequest">
 
-    <data>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cityContainerLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
 
-    </data>
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/hospitalContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cityIcon"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".home.request.CreateRequestFragment">
-
-        <!-- TODO: Update blank fragment layout -->
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cityEditText"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="30dp">
+            android:layout_height="@dimen/_40sdp"
+            android:hint="@string/city"
+            android:lines="1"
+            android:textColorHint="@color/to_color"
+            android:textSize="@dimen/_15sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_create_request"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Create Request"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/cityIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_vector"
+        app:layout_constraintBottom_toBottomOf="@+id/cityContainerLayout"
+        app:layout_constraintEnd_toStartOf="@+id/cityContainerLayout"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cityContainerLayout"
+        app:layout_constraintVertical_bias="0.261" />
 
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hospitalContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/cityContainerLayout"
+        app:layout_constraintStart_toStartOf="@+id/cityContainerLayout"
+        app:layout_constraintTop_toBottomOf="@id/cityContainerLayout">
 
-            <EditText
-                android:id="@+id/et_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="City"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hospitalET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="@string/hospital"
+            android:lines="1"
+            android:textColorHint="@color/to_color"
+            android:textSize="@dimen/_15sdp"
+            app:helperText="@string/required"
+            app:helperTextEnabled="false" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/et_hospital"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="Hospital"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+    <ImageView
+        android:id="@+id/hospitalIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_hospitalv"
+        app:layout_constraintBottom_toBottomOf="@+id/hospitalContainer"
+        app:layout_constraintEnd_toStartOf="@+id/hospitalContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cityIcon"
+        app:layout_constraintTop_toTopOf="@+id/hospitalContainer"
+        app:layout_constraintVertical_bias="0.288" />
 
-            <EditText
-                android:id="@+id/et_blood_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="Blood Type"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bloodTypeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/hospitalContainer"
+        app:layout_constraintStart_toStartOf="@+id/hospitalContainer"
+        app:layout_constraintTop_toBottomOf="@+id/hospitalContainer">
 
-            <EditText
-                android:id="@+id/et_mobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="Mobile"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/bloodTypeET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:elevation="0dp"
+            android:gravity="start"
+            android:hint="@string/blood_type"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColorHint="@color/to_color"
+            android:textSize="@dimen/_10sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/et_add_note"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="Add a note"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+    <ImageView
+        android:id="@+id/bloodTypeIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_bloodtype"
+        app:layout_constraintBottom_toBottomOf="@+id/bloodTypeContainer"
+        app:layout_constraintEnd_toStartOf="@+id/bloodTypeContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hospitalIcon"
+        app:layout_constraintTop_toTopOf="@+id/bloodTypeContainer"
+        app:layout_constraintVertical_bias="0.271" />
 
-            <Button
-                android:id="@+id/btn_save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Button" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileNumTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:textAlignment="center"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/bloodTypeContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bloodTypeContainer"
+        app:layout_constraintTop_toBottomOf="@id/bloodTypeContainer"
+        app:prefixText="+20"
+        app:prefixTextColor="@color/pinky_red">
 
-        </LinearLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobileNumET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:paddingBottom="@dimen/_20sdp"
+            android:textColorHint="@color/to_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <!--        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />-->
+    <ImageView
+        android:id="@+id/phoneIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_phonev"
+        app:layout_constraintBottom_toBottomOf="@+id/mobileNumTextLayout"
+        app:layout_constraintEnd_toStartOf="@+id/mobileNumTextLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bloodTypeIcon"
+        app:layout_constraintTop_toTopOf="@+id/mobileNumTextLayout"
+        app:layout_constraintVertical_bias="0.197" />
 
-    </FrameLayout>
-</layout>
+    <EditText
+        android:id="@+id/notesET"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="14dp"
+        app:helperText="@string/optional"
+        app:helperTextTextColor="@color/to_color"
+        app:layout_constraintEnd_toEndOf="@+id/mobileNumTextLayout"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/mobileNumTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNumTextLayout" />
+
+    <ImageView
+        android:id="@+id/notesIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_notev"
+        app:layout_constraintBottom_toBottomOf="@+id/notesET"
+        app:layout_constraintEnd_toStartOf="@+id/notesET"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="@+id/phoneIcon"
+        app:layout_constraintTop_toTopOf="@+id/notesET" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Request"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:backgroundTint="@color/pinky_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesET"
+        app:layout_constraintVertical_bias="0.204" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

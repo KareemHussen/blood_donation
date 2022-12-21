@@ -19,9 +19,6 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_creareRequestFragment2"
-            app:destination="@id/creareRequestFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -55,13 +52,4 @@
         android:name="com.example.blooddonation.authentication.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
-    <fragment
-        android:id="@+id/creareRequestFragment"
-        android:name="com.example.blooddonation.home.request.CreateRequestFragment"
-        android:label="fragment_creare_request"
-        tools:layout="@layout/fragment_create_request" >
-        <action
-            android:id="@+id/action_creareRequestFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
 </navigation>

@@ -26,4 +26,9 @@
     <string name="donation_request">Donation Request</string>
     <string name="search">Search</string>
     <string name="filters">Filters</string>
+    <string name="required">Required field</string>
+    <string name="city">City</string>
+    <string name="optional">(Optional)</string>
+    <string name="hospital">Hospital</string>
+    <string name="requested_successfully">Blood is successfully requested</string>
 </resources>
