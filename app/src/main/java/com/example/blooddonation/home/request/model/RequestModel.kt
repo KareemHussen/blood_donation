@@ -5,13 +5,10 @@ import com.google.firebase.firestore.ServerTimestamp
 import java.util.Date
 
 data class RequestModel(
-     val city: String, val bloodType: String,
+    val city: String, val bloodType: String,
     val hospital: String,
-    val phoneNumber: Int
-) {
-    constructor(city: String, bloodType: String,
-                hospital: String,
-                phoneNumber: Int, notes: String?) : this(city, bloodType, hospital, phoneNumber)
-}
-
+    val phoneNumber: Int,
+    var name:String="",
+    var date:Date?=null,
+)
 

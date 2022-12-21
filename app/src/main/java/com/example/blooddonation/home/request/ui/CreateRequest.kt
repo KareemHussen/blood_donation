@@ -52,7 +52,7 @@ class CreateRequest : Fragment() {
         val bloodType = binding.bloodTypeET.text.toString()
         val notes: String = binding.notesET.text.toString()
         if (binding.mobileNumET.text!!.isNotEmpty()) {
-            val phoneNumber = Integer.parseInt(binding.mobileNumET.text.toString())
+            val phoneNumber = Integer.parseInt("0"+binding.mobileNumET.text.toString())
             return if (notes.isEmpty()) {
                 RequestModel(city, hospital, bloodType, phoneNumber, "Not specified notes")
             } else {

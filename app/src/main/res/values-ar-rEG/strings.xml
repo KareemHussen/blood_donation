@@ -29,4 +29,5 @@
     <string name="city">المدينة</string>
     <string name="optional">(اختيارى)</string>
     <string name="hospital">مستشفى</string>
+    <string name="requested_successfully">Blood is successfully requested</string>
 </resources>
