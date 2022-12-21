@@ -3,7 +3,6 @@
     <style name="Theme.BloodDonation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/pinky_red</item>
-        <item name="colorPrimaryVariant">@color/pinky_red</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/white</item>

@@ -17,6 +17,8 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CreateRequest : Fragment() {
     private lateinit var binding: FragmentCreateRequestBinding
@@ -41,23 +43,27 @@ class CreateRequest : Fragment() {
             CoroutineScope((Dispatchers.IO)).launch {
                 if (request != null) {
                     requestVm.makeRequest(request)
-                }
+
+                 }
             }
         }
         return binding.root
     }
 
     private fun makeNewRequest(): RequestModel? {
+        val name = binding.etName.text.toString()
         val city = binding.cityEditText.text.toString()
         val hospital = binding.hospitalET.text.toString()
         val bloodType = binding.bloodTypeET.text.toString().uppercase()
         val notes: String = binding.notesET.text.toString()
+        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm ")
+        val currentDate = sdf.format(Date())
         if (binding.mobileNumET.text!!.isNotEmpty()) {
             val phoneNumber = Integer.parseInt("0" + binding.mobileNumET.text.toString())
             return if (notes.isEmpty()) {
-                RequestModel(city, hospital, bloodType, phoneNumber, "Not specified notes")
+                RequestModel(name,city, bloodType, hospital, phoneNumber.toString(), "Not specified notes",currentDate.toString())
             } else {
-                RequestModel(city, hospital, bloodType, phoneNumber, notes)
+                RequestModel(name ,city, hospital, bloodType, phoneNumber.toString(), notes,currentDate.toString())
             }
         }
         return null

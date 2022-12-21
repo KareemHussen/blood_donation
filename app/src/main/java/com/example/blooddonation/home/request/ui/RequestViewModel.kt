@@ -31,7 +31,6 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
             if (userId != null) {
                 request.name = userId
             }
-            request.date = java.util.Calendar.getInstance().time
             val document = requestsCollection.document()
             document.get().addOnSuccessListener { doc ->
                 if (doc != null) {
