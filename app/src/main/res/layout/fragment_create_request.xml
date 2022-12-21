@@ -13,7 +13,8 @@
         android:layout_height="@dimen/_70sdp"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_50sdp"
-
+        android:maxLines="1"
+        android:imeOptions="actionNext"
         app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@id/hospitalContainer"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:hint="@string/city"
-            android:lines="1"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
             android:textColorHint="@color/to_color"
             android:textSize="@dimen/_15sdp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,6 +51,8 @@
         android:layout_width="@dimen/_250sdp"
         android:layout_height="@dimen/_70sdp"
         app:helperTextTextColor="@color/red"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
         app:layout_constraintEnd_toEndOf="@+id/cityContainerLayout"
         app:layout_constraintStart_toStartOf="@+id/cityContainerLayout"
         app:layout_constraintTop_toBottomOf="@id/cityContainerLayout">
@@ -58,7 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:hint="@string/hospital"
-            android:lines="1"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:singleLine="true"
             android:textColorHint="@color/to_color"
             android:textSize="@dimen/_15sdp"
             app:helperText="@string/required"
@@ -87,17 +93,22 @@
         app:layout_constraintStart_toStartOf="@+id/hospitalContainer"
         app:layout_constraintTop_toBottomOf="@+id/hospitalContainer">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/bloodTypeET"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:elevation="0dp"
             android:gravity="start"
             android:hint="@string/blood_type"
-            android:lines="1"
+            android:imeOptions="actionNext"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:singleLine="true"
             android:textAlignment="viewStart"
             android:textColorHint="@color/to_color"
             android:textSize="@dimen/_10sdp" />
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -128,7 +139,6 @@
         app:layout_constraintTop_toBottomOf="@id/bloodTypeContainer"
         app:prefixText="+20"
         app:prefixTextColor="@color/pinky_red">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mobileNumET"
             android:layout_width="match_parent"
@@ -137,7 +147,7 @@
             android:inputType="phone"
             android:maxLength="10"
             android:paddingBottom="@dimen/_20sdp"
-            android:textColorHint="@color/to_color"/>
+            android:textColorHint="@color/to_color" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
