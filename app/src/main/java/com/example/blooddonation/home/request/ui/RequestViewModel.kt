@@ -19,8 +19,6 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
     private val collectionPath = "Requests"
     private val firestore = firebase.firestore
     private val requestsCollection = firestore.collection(collectionPath)
-
-    //TODO Enable request with authentication and pass user id to document path
     private val authUser = firebase.auth
     private val userId = authUser.currentUser?.uid
 
@@ -31,13 +29,15 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
             if (userId != null) {
                 request.name = userId
             }
+            request.timeRequest = java.util.Calendar.getInstance().time.toString()
             val document = requestsCollection.document()
             document.get().addOnSuccessListener { doc ->
                 if (doc != null) {
                     document.set(request).addOnSuccessListener {
                         Log.d("Request Creation", "Request added successfully")
                     }.addOnFailureListener() { e ->
-                        Log.d("Request Creation", e.message.toString()
+                        Log.d(
+                            "Request Creation", e.message.toString()
                         )
                     }
                 } else {
@@ -46,26 +46,6 @@ class RequestViewModel(firebase: Firebase) : ViewModel() {
             }
 
         }
-
-    suspend fun retrieveRequests(): ArrayList<RequestModel> {
-        return withContext(Dispatchers.IO) {
-            val requestsList = ArrayList<RequestModel>()
-            try {
-                val querySnapshot = requestsCollection.get().await()
-                for (document in querySnapshot.documents) {
-                    val request: RequestModel? = document.toObject<RequestModel>()
-                    if (request != null) {
-                        requestsList.add(request)
-                    }
-                    Log.d("Requests Retrieval ", "Requests retrieved successfully")
-                }
-            } catch (e: Exception) {
-                Log.e("Requests Retrieval ", e.message.toString())
-            }
-            Log.d("Requests Retrieval", requestsList.get(0).toString())
-            requestsList
-        }
-    }
 
 
 }

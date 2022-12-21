@@ -119,14 +119,23 @@ class CreateRequest : Fragment() {
         val bloodType = editText.text.toString().uppercase()
         for (c in bloodType.indices) {
             if (c == 0) {
-                if (bloodType[c].uppercase() != "A" && bloodType[c].lowercase() != "B" && bloodType[c].lowercase() != "O") {
+                if (bloodType[c].uppercase() != "A" && bloodType[c].uppercase() != "B" && bloodType[c].uppercase() != "O") {
                     return Result(
                         success = false,
                         errorMessage = "Not a valid Blood type"
                     )
                 }
-            } else if (c == 1) {
-                if (bloodType[c].uppercase() != "B" && bloodType[c] != '+' && bloodType[c] != '-') {
+            }
+            if (c == 1) {
+                if (bloodType[c] != '+' && bloodType[c] != '-'&& bloodType[c] != 'B') {
+                    return Result(
+                        success = false,
+                        errorMessage = "Not a valid Blood type"
+                    )
+                }
+            }
+            if (c == 2) {
+                if (bloodType[c] != '+' && bloodType[c] != '-') {
                     return Result(
                         success = false,
                         errorMessage = "Not a valid Blood type"
