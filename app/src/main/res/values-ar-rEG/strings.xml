@@ -25,4 +25,13 @@
     <string name="search">بحث</string>
     <string name="filters">تصفية البحث</string>
     <string name="todo">TODO</string>
+    <string name="profile_pic_desc">الصورة الشخصية للمستخدم</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="donated">تبرعت</string>
+    <string name="requested">طلبت</string>
+    <string name="available">متاح للتبرع</string>
+    <string name="help">مساعدة</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="invite">ادعُ صديق</string>
+    <string name="edit_profile_btn_desc">تعديل الملف الشخصي</string>
 </resources>

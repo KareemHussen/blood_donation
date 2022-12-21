@@ -2,9 +2,8 @@
     <string name="app_name">Blood Donation</string>
     <string name="app_logo">App Logo</string>
     <string name="app_moto">Dare To Donate</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="profile">Profile</string>
     <string name="onBoarding1_txt">Find Blood Donors</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu tristique tristique quam in.</string>
     <string name="next">Next</string>
@@ -27,4 +26,18 @@
     <string name="donation_request">Donation Request</string>
     <string name="search">Search</string>
     <string name="filters">Filters</string>
+
+    <!--    Profile Fragment Strings    -->
+    <string name="profile">Profile</string>
+    <string name="profile_pic_desc">User Profile Picture</string>
+    <string name="donated">Donated</string>
+    <string name="requested">Requested</string>
+    <string name="available">Available to donate</string>
+    <string name="help">Get help</string>
+    <string name="sign_out">Sign out</string>
+    <string name="invite">Invite a friend</string>
+    <string name="edit_profile_btn_desc">Edit profile</string>
+
+    <!--  Edit Profile Fragment Strings  -->
+
 </resources>
