@@ -52,7 +52,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/_32sdp"
-                app:layout_constraintBottom_toTopOf="@+id/til_email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
