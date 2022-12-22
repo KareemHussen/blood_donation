@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="user"
             type="com.example.blooddonation.domain.User" />
+
+        <!-- TODO: two way data-binding to be implemented in the edit-text fields -->
     </data>
 
     <ScrollView
@@ -48,10 +51,10 @@
                 android:id="@+id/til_userName"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                app:helperTextTextColor="@color/main"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/_32sdp"
+                app:helperTextTextColor="@color/main"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -75,8 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
-                app:layout_constraintBottom_toTopOf="@+id/til_phone"
                 app:helperTextTextColor="@color/main"
+                app:layout_constraintBottom_toTopOf="@+id/til_phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +105,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
-                app:layout_constraintBottom_toTopOf="@+id/til_blood"
                 app:helperTextTextColor="@color/main"
+                app:layout_constraintBottom_toTopOf="@+id/til_blood"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,8 +130,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
-                app:layout_constraintBottom_toTopOf="@+id/til_location"
                 app:helperTextTextColor="@color/main"
+                app:layout_constraintBottom_toTopOf="@+id/til_location"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -152,8 +155,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/loginMarginTop"
-                app:layout_constraintBottom_toTopOf="@+id/btn_register"
                 app:helperTextTextColor="@color/main"
+                app:layout_constraintBottom_toTopOf="@+id/btn_register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -176,6 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/loginMarginHorizontal"
                 android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/round_style"
                 android:gravity="center"
                 android:paddingVertical="@dimen/_10sdp"
@@ -183,7 +187,6 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/til_location" />
 
