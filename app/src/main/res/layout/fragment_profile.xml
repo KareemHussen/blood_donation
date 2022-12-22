@@ -20,6 +20,7 @@
             android:layout_marginEnd="16dp"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/edit_profile_btn_desc"
+            android:foreground="?android:attr/selectableItemBackground"
             android:minWidth="48dp"
             android:minHeight="48dp"
             android:src="@drawable/edit_btn"
@@ -45,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="12dp"
             android:contentDescription="@string/profile_pic_desc"
             android:src="@drawable/rectangle_27"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Kevin Durant"
             android:textAlignment="center"
@@ -82,7 +83,6 @@
             android:id="@+id/user_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Brooklyn, New York"
             android:textAlignment="center"
@@ -97,34 +97,30 @@
             android:id="@+id/user_info_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="20dp"
+            android:divider="@drawable/divider"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
+            android:showDividers="middle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_location">
-
-
-
-
-
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@id/user_location" />
 
         <LinearLayout
             android:id="@+id/user_buttons_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_info_layout">
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
+            <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -137,7 +133,9 @@
                 android:paddingEnd="8dp"
                 android:text="@string/available"
                 android:textColor="@color/grey_white"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                app:trackTint="@color/switch_track_selector"
+                app:thumbTint="@color/switch_thumb_selector" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
@@ -176,6 +174,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/rounded_rect_shape"
                 android:drawableStart="@drawable/sign_out_btn"
                 android:drawablePadding="12dp"
