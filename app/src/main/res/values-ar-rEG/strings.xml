@@ -34,4 +34,7 @@
     <string name="sign_out">تسجيل الخروج</string>
     <string name="invite">ادعُ صديق</string>
     <string name="edit_profile_btn_desc">تعديل الملف الشخصي</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="save_btn">احفظ</string>
+    <string name="required">مطلوب</string>
 </resources>

@@ -39,5 +39,9 @@
     <string name="edit_profile_btn_desc">Edit profile</string>
 
     <!--  Edit Profile Fragment Strings  -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="required">Required</string>
+    <string name="save_btn">Save</string>
+
 
 </resources>
