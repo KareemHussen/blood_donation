@@ -36,5 +36,9 @@
     <string name="edit_profile_btn_desc">تعديل الملف الشخصي</string>
     <string name="edit_profile">تعديل الملف الشخصي</string>
     <string name="save_btn">احفظ</string>
-    <string name="required">مطلوب</string>
+    <string name="required">هذه الخانة مطلوبة</string>
+    <string name="city">المدينة</string>
+    <string name="optional">(اختيارى)</string>
+    <string name="hospital">مستشفى</string>
+    <string name="requested_successfully">Blood is successfully requested</string>
 </resources>

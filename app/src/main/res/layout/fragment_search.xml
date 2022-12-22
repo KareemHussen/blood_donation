@@ -25,20 +25,22 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.SearchView
-        android:id="@+id/rectangle_2"
-        android:layout_width="0dp" android:layout_weight="1"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
+            android:id="@+id/rectangle_2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
 
-        android:background="@drawable/search_view_bg"
-        android:elevation="49dp"
-        app:iconifiedByDefault="false"
-        app:queryHint="Search..." />
+            android:background="@drawable/search_view_bg"
+            android:elevation="49dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search..." />
 
     </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:layout_marginTop="10dp"
         android:background="#fff"
         android:elevation="10dp"
@@ -53,20 +55,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/filters"
-                    android:textStyle="bold"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/filters"
                     android:textAppearance="@style/filters"
-                    android:gravity="center_horizontal|top"/>
+                    android:textStyle="bold" />
 
                 <Spinner
 
@@ -74,8 +78,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="2dp"
-                    android:layout_marginEnd="2dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center" />
 
@@ -112,12 +116,12 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="156dp"
                     android:layout_height="44dp"
-                    android:text="Apply"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
+                    android:layout_gravity="center"
                     android:layout_marginTop="180dp"
                     android:background="@drawable/botton_apply"
-                    android:layout_gravity="center"/>
+                    android:text="Apply"
+                    android:textAllCaps="false"
+                    android:textColor="#fff" />
             </LinearLayout>
 
 

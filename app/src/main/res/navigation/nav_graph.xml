@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createRequest"
+            app:destination="@id/createRequest" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -36,7 +39,7 @@
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/donationRequestFragment"
-        android:name="com.example.blooddonation.home.request.DonationRequestFragment"
+        android:name="com.example.blooddonation.home.request.ui.DonationRequestFragment"
         android:label="fragment_donation_request"
         tools:layout="@layout/fragment_donation_request" />
 
@@ -55,7 +58,24 @@
         android:id="@+id/loginFragment"
         android:name="com.example.blooddonation.authentication.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createRequest"
+        android:name="com.example.blooddonation.home.request.ui.CreateRequest"
+        android:label="CreateRequest" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.blooddonation.authentication.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.blooddonation.profile.edit.EditProfileFragment"

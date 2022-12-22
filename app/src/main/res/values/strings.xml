@@ -40,8 +40,13 @@
 
     <!--  Edit Profile Fragment Strings  -->
     <string name="edit_profile">Edit Profile</string>
-    <string name="required">Required</string>
     <string name="save_btn">Save</string>
 
 
+    <string name="required">Required field</string>
+    <string name="city">City</string>
+    <string name="optional">(Optional)</string>
+    <string name="hospital">Hospital</string>
+    <string name="requested_successfully">Blood is successfully requested</string>
+    <string name="name">Name</string>
 </resources>
