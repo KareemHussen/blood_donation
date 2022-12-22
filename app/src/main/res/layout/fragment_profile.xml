@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="user"
+            type="com.example.blooddonation.domain.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,6 +17,7 @@
         tools:context=".profile.ProfileFragment">
 
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -42,13 +46,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/profile_pic"
+            android:id="@+id/profile_pic_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="12dp"
             android:contentDescription="@string/profile_pic_desc"
             android:src="@drawable/rectangle_27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_text" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile_pic_fg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            app:imageUrl="@{user.pictureUrl}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_text"
@@ -60,13 +75,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Kevin Durant"
+            android:text="@{user.name}"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic_bg"
             tools:text="Kevin Durant" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -84,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:text="Brooklyn, New York"
+            android:text="@{user.location}"
             android:textAlignment="center"
             android:textColor="#7C7C7C"
             android:textSize="18sp"
@@ -134,8 +149,8 @@
                 android:text="@string/available"
                 android:textColor="@color/grey_white"
                 android:textSize="14sp"
-                app:trackTint="@color/switch_track_selector"
-                app:thumbTint="@color/switch_thumb_selector" />
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"

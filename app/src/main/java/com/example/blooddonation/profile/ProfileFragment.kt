@@ -9,9 +9,11 @@ import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import androidx.core.view.marginStart
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.blooddonation.R
 import com.example.blooddonation.databinding.FragmentProfileBinding
 import com.example.blooddonation.databinding.InfoBlockBinding
+import com.example.blooddonation.domain.User
 import kotlin.math.absoluteValue
 
 
@@ -19,14 +21,6 @@ class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var viewModel: ProfileViewModel
-    private val dummyInfoList: List<Pair<String, String>>
-        get() {
-            return listOf(
-                Pair("A+" , "Blood Type"),
-                Pair("05" , "Donated"),
-                Pair("02" , "Requested"),
-            )
-        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,15 +31,51 @@ class ProfileFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val user = User(
+            "Kevin Durant",
+            "1a2s3d%$]'",
+            "+108005473614",
+            "Brooklyn, NYC, New York",
+            "A+",
+            5,
+            2,
+            true,
+            "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png"
+        )
+
+        binding.user = user
+
+        val donationsGivenStr = if (user.donationsGiven > 9)
+            user.donationsGiven.toString()
+        else "0" + user.donationsGiven.toString()
+
+        val donationsRequestedStr = if (user.donationsRequested > 9)
+            user.donationsRequested.toString()
+        else "0" + user.donationsRequested.toString()
+
+        val infoList = listOf(
+            Pair(user.bloodType, "Blood Type"),
+            Pair(donationsGivenStr, "Donated"),
+            Pair(donationsRequestedStr, "Requested"),
+        )
+
         val linearLayout = binding.userInfoLayout
-        for (block in dummyInfoList) {
-            val blockBinding : InfoBlockBinding = DataBindingUtil.inflate(layoutInflater, R.layout.info_block, null, false)
+        for (block in infoList) {
+
+            val blockBinding: InfoBlockBinding =
+                DataBindingUtil.inflate(layoutInflater, R.layout.info_block, null, false)
 
             blockBinding.infoText.text = block.first
             blockBinding.infoTypeText.text = block.second
 
             linearLayout.addView(blockBinding.root)
         }
+
+        binding.editBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
+        }
+
     }
 
 }
