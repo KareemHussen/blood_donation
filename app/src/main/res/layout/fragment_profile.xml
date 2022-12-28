@@ -123,87 +123,94 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_location" />
 
-        <LinearLayout
-            android:id="@+id/user_buttons_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_info_layout">
 
-            <androidx.appcompat.widget.SwitchCompat
+            <LinearLayout
+                android:id="@+id/user_buttons_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_rect_shape"
-                android:drawableStart="@drawable/available_btn"
-                android:drawablePadding="12dp"
-                android:fontFamily="@font/poppins_medium"
-                android:minHeight="55dp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="@string/available"
-                android:textColor="@color/grey_white"
-                android:textSize="14sp"
-                app:thumbTint="@color/switch_thumb_selector"
-                app:trackTint="@color/switch_track_selector" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_rect_shape"
-                android:drawableStart="@drawable/invite_btn"
-                android:drawablePadding="12dp"
-                android:fontFamily="@font/poppins_medium"
-                android:minHeight="55dp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="@string/invite"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textColor="@color/grey_white"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_rect_shape"
+                    android:drawableStart="@drawable/available_btn"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="55dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/available"
+                    android:textColor="@color/grey_white"
+                    android:textSize="14sp"
+                    app:thumbTint="@color/switch_thumb_selector"
+                    app:trackTint="@color/switch_track_selector" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_rect_shape"
-                android:drawableStart="@drawable/help_btn"
-                android:drawablePadding="12dp"
-                android:fontFamily="@font/poppins_medium"
-                android:minHeight="55dp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="@string/help"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textColor="@color/grey_white"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_rect_shape"
+                    android:drawableStart="@drawable/invite_btn"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="55dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/invite"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_white"
+                    android:textSize="14sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_rect_shape"
-                android:drawableStart="@drawable/sign_out_btn"
-                android:drawablePadding="12dp"
-                android:fontFamily="@font/poppins_medium"
-                android:minHeight="55dp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="@string/sign_out"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textColor="@color/grey_white"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_rect_shape"
+                    android:drawableStart="@drawable/help_btn"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="55dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/help"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_white"
+                    android:textSize="14sp" />
 
-        </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_rect_shape"
+                    android:drawableStart="@drawable/sign_out_btn"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="55dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/sign_out"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
