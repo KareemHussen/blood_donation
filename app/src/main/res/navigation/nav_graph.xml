@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -35,4 +35,9 @@
         android:name="com.example.blooddonation.DonationRequestFragment"
         android:label="fragment_donation_request"
         tools:layout="@layout/fragment_donation_request" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.blooddonation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>

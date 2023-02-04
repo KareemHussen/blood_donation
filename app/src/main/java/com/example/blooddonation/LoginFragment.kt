@@ -26,6 +26,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // TODO('Login then validate email and password !')
         login()
         forgetPassword()
         checkEmail()
@@ -40,6 +41,7 @@ class LoginFragment : Fragment() {
         }
     }
 
+    // TODO('What Is This ??!!')
     private fun validEPassword() : String?{
         return null
     }
@@ -71,6 +73,7 @@ class LoginFragment : Fragment() {
         }
     }
 
+    // TODO('What Is This, made a function for just a toast ?')
     private fun forgetPassword(){
         tvForgot_pass.setOnClickListener {
             /*fragmentManager?.beginTransaction()?.apply {
