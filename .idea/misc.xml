@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Joo/blood_donation/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Joo/blood_donation/app/src/main/res/layout/fragment_register.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/Joo/blood_donation/app/src/main/res/layout/fragment_second_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Joo/blood_donation/app/src/main/res/layout/fragment_view_pager.xml" value="0.11302083333333333" />
       </map>
     </option>
