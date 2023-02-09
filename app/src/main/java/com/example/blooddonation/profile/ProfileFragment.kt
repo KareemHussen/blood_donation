@@ -1,20 +1,16 @@
 package com.example.blooddonation.profile
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams
-import android.view.ViewGroup.MarginLayoutParams
-import androidx.core.view.marginStart
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.blooddonation.R
 import com.example.blooddonation.databinding.FragmentProfileBinding
 import com.example.blooddonation.databinding.InfoBlockBinding
 import com.example.blooddonation.domain.User
-import kotlin.math.absoluteValue
 
 
 class ProfileFragment : Fragment() {
@@ -33,11 +29,11 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val user = User(
-            "Kevin Durant",
+            "Marshall Mathers",
             "1a2s3d%$]'",
             "+108005473614",
-            "Brooklyn, NYC, New York",
-            "A+",
+            "Detroit, Michigan",
+            "O+",
             5,
             2,
             true,
@@ -46,13 +42,8 @@ class ProfileFragment : Fragment() {
 
         binding.user = user
 
-        val donationsGivenStr = if (user.donationsGiven > 9)
-            user.donationsGiven.toString()
-        else "0" + user.donationsGiven.toString()
-
-        val donationsRequestedStr = if (user.donationsRequested > 9)
-            user.donationsRequested.toString()
-        else "0" + user.donationsRequested.toString()
+        val donationsGivenStr = formatNumber(user.donationsGiven)
+        val donationsRequestedStr = formatNumber(user.donationsRequested)
 
         val infoList = listOf(
             Pair(user.bloodType, "Blood Type"),
@@ -76,6 +67,15 @@ class ProfileFragment : Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
         }
 
+    }
+
+    /**
+     * Formats number to have leading zero if it is less than 10
+     * @param number number to format
+     * @return formatted number
+     */
+    private fun formatNumber(number: Int): String {
+        return if (number > 9) number.toString() else "0$number"
     }
 
 }
