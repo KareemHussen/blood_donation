@@ -22,8 +22,8 @@ class LoginFragment : Fragment() {
         loginBinding= DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         val text = "<font color=#FF2156>Dare</font> <font color=#595959>To</font> <font color=#FF2156>Donate</font>"
         loginBinding.donateText.text = HtmlCompat.fromHtml(text,HtmlCompat.FROM_HTML_OPTION_USE_CSS_COLORS)
-        loginBinding.loginBtn.setOnClickListener {
-            findNavController().navigate(R.id.homeFragment)
+        loginBinding.skiptoRequest.setOnClickListener {
+            findNavController().navigate(R.id.createRequest)
         }
         return loginBinding.root
     }

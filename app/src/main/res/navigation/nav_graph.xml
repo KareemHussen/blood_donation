@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/donationRequestFragment"
-        android:name="com.example.blooddonation.home.request.DonationRequestFragment"
+        android:name="com.example.blooddonation.home.request.ui.DonationRequestFragment"
         android:label="fragment_donation_request"
         tools:layout="@layout/fragment_donation_request" />
 
@@ -69,4 +69,9 @@
             android:id="@+id/action_registerFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/createRequest"
+        android:name="com.example.blooddonation.home.request.ui.CreateRequest"
+        android:label="fragment_create_request"
+        tools:layout="@layout/fragment_create_request" />
 </navigation>

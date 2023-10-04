@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_BloodDonation)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.bottomNavigationView.background = null;
