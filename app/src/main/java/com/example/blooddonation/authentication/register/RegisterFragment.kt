@@ -97,7 +97,7 @@ class RegisterFragment : Fragment() {
                     "Registration Done Successfully",
                     Toast.LENGTH_SHORT
                 ).show()
-                findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+//                findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
 
             } else {
                 Toast.makeText(

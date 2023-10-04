@@ -1,12 +1,14 @@
 package com.example.blooddonation
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -38,6 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setupWithNavController(navController)
         supportActionBar?.hide()
+
+        binding.fab.setOnClickListener {
+            navController.navigate(R.id.createRequest)
+        }
+
     }
 
     private fun getMainActivityComponentsState(navController: NavController) {
@@ -46,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment,
                 R.id.profileFragment,
                 R.id.searchFragment,
-                R.id.donationRequestFragment
+                R.id.donationRequestFragment,
             )
         )
         navController.addOnDestinationChangedListener { _: NavController, destination: NavDestination, _: Bundle? ->
